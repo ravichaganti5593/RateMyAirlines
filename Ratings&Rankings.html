@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>RateMyAirlines</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">	<!-- In CSS folder (visibility hidden to public) -->
+		<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">	<!-- In CSS folder (visibility hidden to public) -->
+		<link rel="stylesheet" href="css/style2.css" type="text/css" media="all">	<!-- In CSS folder (visibility hidden to public) -->
+		<script type="text/javascript" src="js/jquery-1.6.js" ></script>			<!-- In JS Folder (visibility hidden to public) -->
+		<script type="text/javascript" src="js/cufon-yui.js"></script>				<!-- In JS Folder (visibility hidden to public) -->
+		<script type="text/javascript" src="js/cufon-replace.js"></script>			<!-- In JS Folder (visibility hidden to public) --> 
+		<script type="text/javascript" src="js/Vegur_300.font.js"></script>			<!-- In JS Folder (visibility hidden to public) -->
+		<script type="text/javascript" src="js/PT_Sans_700.font.js"></script>		<!-- In JS Folder (visibility hidden to public) -->
+		<script type="text/javascript" src="js/PT_Sans_400.font.js"></script>		<!-- In JS Folder (visibility hidden to public) -->
+		<script type="text/javascript" src="js/tms-0.3.js"></script>				<!-- In JS Folder (visibility hidden to public) -->
+		<script type="text/javascript" src="js/tms_presets.js"></script>			<!-- In JS Folder (visibility hidden to public) -->
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>		<!-- In JS Folder (visibility hidden to public) -->
+		<script type="text/javascript" src="js/atooltip.jquery.js"></script>		<!-- In JS Folder (visibility hidden to public) -->
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="js/html5.js"></script>
+		<link rel="stylesheet" href="css/ie.css" type="text/css" media="all">
+		<![endif]-->
+		<!--[if lt IE 7]>
+			<div style=' clear: both; text-align:center; position: relative;'>
+				<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a>
+			</div>
+		<![endif]-->
+		<style type="text/css">
+			@font-face{
+				font-family: FormFont;
+				src: url('Ubuntu-R.ttf');
+			}
+			div.topBox{
+				margin-top: 0px;
+				margin-left: 0px;
+				width: 650px;
+				height: 125px;
+				visibility: hidden;
+			}
+			
+			div.text1 {
+			background: black;			
+			}
+			
+			#box1{
+				background: url('images/back1.png');
+				background-repeat: no-repeat;
+				width: 425px;
+				height: 425px;
+				background-size: 100%, 100%;
+				border-bottom-right-radius: 5px;
+				border-bottom-left-radius: 5px;
+				border-top-right-radius: 5px;
+				border-top-left-radius: 5px;
+			}
+			#box2{
+				background: url('images/back2.png');
+				background-repeat: no-repeat;
+				width: 425px;
+				height: 425px;
+				background-size: 100%, 100%;
+				border-bottom-right-radius: 5px;
+				border-bottom-left-radius: 5px;
+				border-top-right-radius: 5px;
+				border-top-left-radius: 5px;
+			}
+			.h3{
+				font-size: 25px;
+			}
+			h3{
+				color: green;
+				font-family: FormFont;
+				font-size: 200%;
+			}
+			#rating{
+				margin-left: 50px;
+			}
+			#ranking{
+				margin-left: 50px;
+			}
+			.h4{
+				font-size: 18px;
+			}
+			h4{
+				color: black;
+				font-family: FormFont;
+			}
+			#td2{
+				width: 42px;
+			}
+			#table{
+				margin-left: 30px;
+				height: auto;
+			}
+			#back1{
+				position: absolute;
+				left: 160px;
+				bottom: 125px;
+				height: auto;
+				width: 350px;
+				background: url('images/pic6.png');
+				background-repeat: no-repeat;
+			}
+			#back2{
+				position: absolute;
+				left: 610px;
+				bottom: 125px;
+				height: auto;
+				width: 350px;
+				background: url('images/pic7.png');
+				background-repeat: no-repeat;
+			}
+			div.bottom{
+				width: 100%;
+				background: black;
+			}
+		</style>
+	</head>
+	<body id="page5">
+		<div class="main">
+<!--header -->
+			<header>
+				<div class="topBox">
+					<p></p>
+				</div>
+				<nav>
+					<ul id="menu">
+						<li class="active"><a href="index.html"><span>Home</span></a></li>
+						<li><a href="Ratings&Rankings.html"><span>Ratings & Rankings</span></a></li>
+						<li><a href="BlueSpinach.html"><span>BlueSpinach</span></a></li>
+						<li><a href="Careers.html"><span>Careers</span></a></li>
+						<li class="last"><a href="AboutUs.html"><span>About Us</span></a></li>
+					</ul>
+				</nav>
+			</header>
+<!--header end-->
+		</div>
+		<div class="main">
+			<br>
+			<br>
+			<div class="text">
+				<table Id="table">
+					<tr>
+						<td Id="td1"></td>
+						<td Id="box1">
+							<table Id="rating">
+								<tr>
+									<td class="h3"><h3 align ="left" style='padding-left : 90px'>Ratings</h3></td>
+								</tr>
+								<tr>
+									<td class="h4"><h4>Select an airline, origin, destination and duration of your journey and rate the airline on the criteria of Food, In-Flight Entertainment(IFE), Ambiance, Service, Performance and Ground-Staff Service!</h4><br></td>
+								</tr>
+								<tr>
+									<td Id="back1"><canvas Id="MyCanvas" width="158" height="46" onclick="location.href='Ratings.php';" style="cursor:pointer;"></canvas></td>
+									<script>
+										var c = document.getElementById("MyCanvas");
+										var ctx = c.getContext("2d");
+										var img = document.createElement("img1");
+										img.src = "pic6.png";
+										MyCanvas.appendChild(img);
+									</script>
+								</tr>
+							</table>
+						</td>
+						<td Id="td2"></td>
+						<td Id="box2">
+							<table Id="ranking">
+								<tr>
+									<td class="h3"><h3 align = "left" style = 'padding-left: 75px'>Rankings</h3></td>
+								</tr>
+								<tr>
+									<td class="h4"><h4>View the World Rankings and other rankings! Also check out the civil aviation statistics with illustrative graphs and tables!</h4><br></td>
+								</tr>
+								<tr>
+									<td Id="back2"><canvas Id="MyCanvas" width="158" height="46" onclick="location.href='Rankings.html';" style="cursor:pointer;"></canvas></td>
+								</tr>
+							</table>
+						</td>
+						<td Id="td3"></td>
+					</tr>
+				</table>
+			</div><br><br>
+			<div class = "main">
+			</div>
+			</div>
+<br>
+<!--content end-->
+<!--footer -->
+					
+<div class="bottom">			
+<footer>
+				<ul id="icons">
+					<li class="first">Follow Us:</li>
+					<li><a href="#" class="normaltip" title="Facebook"><img src="images/icon1.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Twitter"><img src="images/icon2.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="Google+"><img src="images/icon3.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip" title="YouTube"><img src="images/icon4.jpg" alt=""></a></li>
+				</ul>
+				RateMyAirlines &copy; 2015
+				<!-- {%FOOTER_LINK} -->
+			</footer>
+</div>					
+<!--footer end-->
+		<script type="text/javascript"> Cufon.now(); </script>
+	</body>
+</html>
